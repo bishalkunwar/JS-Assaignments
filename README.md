@@ -11,4 +11,4 @@ we can simply run the loclhost server . Go live on the server.
 #To run oddEvenFilteration.js:
 node oddEvenFilteration.js
 
-Prompt is not working on console input, i'll research on input
+Prompt is not working on console input, i'll research on input methods for that ll try to execute later dai.
