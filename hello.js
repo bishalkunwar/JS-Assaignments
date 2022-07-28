@@ -478,3 +478,223 @@
 // console.log(`The multiplication of given number is ${mult(5,6)}`);
 
 // // difference between normal function and fat arrow function is that, 
+
+
+
+
+// // Arrays in JavaScript.
+
+// // when we feel like storing multiple values in one variable then instead of var , we will use an array.
+// // In JavaScript we have an Array class and arrays are the prototype of this class.
+// // examples:-
+
+
+// // Array Traversal.
+// var myBros = ['bishal', 'rozan', 'santosh', 'roshan' ];
+// console.log(myBros[myBros.length-1]);
+
+
+// difference between for in loop and for of loop. / was introduced in ES6.
+
+// var myBros = ['bishal', 'rozan', 'santosh', 'roshan' ];
+// // for (var i=0;i<myBros.length;i++){ 
+// //     console.log(myBros[i]);
+// // } // this is the traditional appraoch of iterating array elements.
+
+// for(let elements in myBros){
+//     console.log(elements);
+// } // iterates the indexes.
+
+// for(elements of myBros){
+//     console.log(elements);
+// } // iterates the index values.
+
+
+// // Array.Prototype.forEach()
+// myBros.forEach(function(element, index, array){
+//     console.log(`element ${element} at index : ${index} of : ${array}`);
+// }); // forEach loop is the combination of for in and for of loop.
+
+// myBros.forEach((element, index, array)=>{
+//     console.log(`element ${element} at index : ${index} of : ${array}`);
+// })
+
+
+// var myBros = ['bishal', 'rozan', 'santosh', 'roshan', 'ram', 'shyam', 'hari' ];
+
+// // 2.  Searching and Filter in an array.  array subsection 2.
+// // Array.prototype.indexOf() :
+
+// // Returns the first (least) index of an elemet within the array equal to an element, or -1 if none is found. It search the element from the 0th index number.
+
+// var myBros = ['bishal', 'rozan', 'santosh', 'roshan', 'ram', 'shyam', 'hari' ];
+// console.log(myBros.indexOf('santosh')); // forward searching.
+// console.log(myBros.lastIndexOf("rozan", 5)); // backward searching.
+
+// // Array.prototype.includes().
+// // Determines whether the array contains a value, returns true or false as appropriate.
+
+// console.log(myBros.includes("rozan"));
+// console.log(myBros.includes("sita"));
+
+
+// // Array.prototype.find() .
+// // returns the found element in the array, if some element in the array satisfies the testing function or udefined if not found.  only problem is that it returns only one element.
+
+// const prices = [ 200, 300, 350, 400, 500, 450, 550];
+
+// const findElement = prices.find((currVal)=>currVal<400);
+// console.log(findElement);
+
+// const findAnotherElement = prices.find((currValue)=>currValue>200);
+// console.log(findAnotherElement);
+
+
+// array.prototype.findIndex().
+// returns the indexnumber, if not found the index number then will return -1
+
+// console.log(prices.findIndex((currValue)=>currValue>450));
+
+
+
+// // array.prototype.filter.
+// // Returns a new array containing all elements of the calling array for which the provided filtering fuction returns true.
+// const newTag = prices.filter((elem, index)=> {return elem>200});
+// console.log(newTag);
+
+
+// // Array subsection . how to sort an array.
+// // Array.prototype.sort().
+// // The sort() method sorts the element of an array in place and returns the sorted array. the default sort order is ascending, built upon converting the elements into strings. then comparing their sequences of UTF-16 code units values.
+
+// const months = ['march', 'jan', 'april', 'feb', 'dec', 'nov', 'sept'];
+// console.log(months.sort());
+
+
+// // const array1 = [1, 30, 4, 21, 100000, 99];
+// // console.log(array1.sort());
+
+// // However, if numbers are sorted as strings, 
+// // "25" is bigger than "100", because "2" is bigger than "1".
+
+// // Because of this, the sort() method will produce an incorrect 
+// // result when sorting numbers.
+
+
+
+// // Array subsection 4 ==> perform crud.
+// // Array.prototype.push() the push() method adds one or more element to the end of an array and returns the new length of the array.
+
+// const animals = ['cat', 'dog', 'rhino'];
+// animals.push("bagh", "syal");
+
+// // animals.forEach((element, index, array)=>{
+// //     console.log(`${element} at ${index}`);
+// // })
+
+// // Array.Prototype.unshift()
+// animals.unshift("gandhi", "koirala");
+// animals.forEach((element, index, array)=>{
+//     console.log(`${element} at ${index}`);
+// })
+
+
+// // 2nd example.
+// const myNumbers = [1,2,3,4,5];
+// myNumbers.unshift(6,7);
+// console.log(myNumbers);
+
+
+// // Array.prototype.pop() .
+// // The pop() method removes the last element from an array and returns that element, this method changes the length of the array.
+
+// const plants = ['broccoli', 'cabbage', 'cauli', 'venta', 'chipleventi'];
+// console.log(plants);
+// console.log(plants.pop());
+// console.log(plants);
+
+// // shift() method.
+// console.log(plants.shift());
+// console.log(plants);
+
+
+// // splice() method does all the work of unshift push pop and shift.
+
+// const months = ['jan', 'april', 'feb', 'august', 'june'];
+// // // add dec at the end , update april to April, delete feb.
+
+// // months.splice(months.length-3, 0, 'happy');
+// // console.log(months);
+// // months.splice(2, 1 );
+// // console.log(months);
+// const indexOfMonth = months.indexOf('august');
+// if(indexOfMonth!=-1){
+//     const updateMonth = months.splice(indexOfMonth, 1);
+//     console.log(months);
+// }else{
+//     console.log("no match");
+// }
+// // months.splice(0,1,'newJan');
+// // console.log(months);
+
+
+
+// Map Reduce Filter.
+// Array.Prototype.map()
+// let newArray = arr.map(callback(currebtValue, index, array){
+//     returns element of new array, after executing something.
+// }[thisArg]);
+
+// Returns a new array containing the results of calling a function on every element in this array.
+
+
+// const array1 = [1, 3, 4 , 9 , 5 , 6, 7 ];
+// // // num>5
+// // let newArray = array1.map((currElement, index, array)=>{
+// //     return currElement>=5;
+// // });
+
+// // console.log(newArray);
+// // console.log(array1);
+
+// let newArray = array1.map((element, index, array)=>{
+//     return `index number: ${index} has the element: ${element} from the array: ${array}`
+// })
+
+// let newArrayFor = array1.forEach((element, index, array)=>{
+//     return `index number: ${index} has the element: ${element} from the array: ${array}`
+// });
+// console.log(newArrayFor);
+
+// console.log(newArray);
+
+
+// // Challenging question, find the square root of each element in  an array, let arr = [25,36,49,64,81];
+// let arr = [25,36,49,64,81];
+// let arrSquare = arr.map((element, index, array)=>{
+//     return Math.sqrt(element);
+// });
+
+// console.log(arrSquare);
+
+
+// let arr = [2,3,4,5,6,7,8];
+
+// let newArray = arr.map((element, index, array)=>{
+//     return element*2;
+// }).filter((element)=>{return element>10}).reduce((accumulator, element, index, arary)=>{return accumulator += element});
+
+// console.log(newArray);
+
+
+
+// // Reduce method.
+// // Reduce method is used to flatten an array, to reduce 2/3 dimensional array to single one.
+// // the reducer function takes four arguements, accumulator, current value, current index, source array.
+
+// let arr1 = [5,6,2];
+// let sum = arr1.reduce((accumulator, element, index, array)=>{
+//     return accumulator += element;
+// })
+
+// console.log(sum);
