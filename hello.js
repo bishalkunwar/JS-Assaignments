@@ -354,13 +354,127 @@
 // sum(10,30);
 
 
-function sum(a, b){
-    var total = a+b;
-    return total;
-}
+// function sum(a, b){
+//     var total = a+b;
+//     return total;
+// }
 
-var result = sum(10,20);
-var result1 = sum(20,30);
-console.log(`the s,um of numbers is : ${result}`);
-console.log(`the sum of the 2nd numbers is : ${result1}`);
-console.log(`is result greater than result1? :- ${result>=result1}`);
+// var result = sum(10,20);
+// var result1 = sum(20,30);
+// console.log(`the s,um of numbers is : ${result}`);
+// console.log(`the sum of the 2nd numbers is : ${result1}`);
+// console.log(`is result greater than result1? :- ${result>=result1}`);
+
+
+// // Modern JavaScript. ES6.
+
+// // 1. Let and Const 
+// // var --> Function Scope, Let and const --> Block scope. const is the constant.
+
+
+// var myName = "Bishal Kunwar";
+// console.log(myName);
+
+// myName = "changed to sujan";
+// console.log(myName);
+
+
+
+// let myName = "Bishal Kunwar";
+// console.log(myName);
+
+// myName = "changed to sujan";
+// console.log(myName);
+
+
+
+// const myName = "Bishal Kunwar";
+// console.log(myName);
+
+// myName = "changed to sujan";
+// console.log(myName);
+
+
+
+
+// function bioData(){
+//     var fName = "Bishal";
+//     console.log(fName);
+
+//     if(true){
+//         var lName = "Kunwar";
+//         console.log("innner defined "+lName);
+//         console.log("outer defined "+fName);
+//     }
+
+//     console.log("internal scope lName "+lName);
+// }
+
+// console.log("core inner "+ fName);
+
+// bioData();
+
+
+
+// // let based.
+
+// function bioData(){
+//     const fName = "Bishal";
+//     console.log(fName);
+
+//     if(true){
+//     const lName = "Kunwar";
+//     console.log("innner defined "+lName);
+//     console.log("outer defined "+fName);
+//     }
+
+//     console.log("internal scope lName "+lName);
+// }
+
+//     // console.log("core inner "+ fName);
+
+// bioData();
+
+
+
+
+// // 2. Template Literals.
+// // JavaScript program to print table for given number (8)
+
+// for(i=1;i<=10;i++){
+//     let tableNumber = 8;
+//     // console.log(tableNumber+"*"+i+"=="+tableNumber*i);
+//     console.log(`${tableNumber} * ${i} == ${tableNumber*i}`);
+// }
+
+
+// let n = 5;
+// let string = "";
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 0; j < i; j++) {
+//     string += "*";
+//   }
+//   string = string+"\n";
+// }
+// console.log(string);
+
+
+
+// // default paramater. it avoids the error NAN,
+// function mult(a=1, b=2){
+//     return a*b;
+// }
+
+// console.log(mult(2,3));
+
+
+
+
+// // ES6, Fat Arrow Function.
+// const mult = (a=1, b=2)=>{
+//     return a*b;
+// }
+
+// console.log(`The multiplication of given number is ${mult(5,6)}`);
+
+// // difference between normal function and fat arrow function is that, 
