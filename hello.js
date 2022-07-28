@@ -698,3 +698,95 @@
 // })
 
 // console.log(sum);
+
+// const arrayNew = [['zone1', 'hello', 'felow'], ['zone2', 'second'], ['new', 'one']];
+
+// let flatter = arrayNew.reduce((accumulator, element)=>{
+//     return accumulator.concat(element);
+// })
+
+// console.log(flatter);
+
+
+
+
+
+
+// // Getting started with the Strings.
+
+// // A JavaScript String is a zero or more characters written inside quotes.
+// //JS Strings are used for storing and manipulating texts.
+// // Strings can be created as primitives.
+// // From String literals, or as objects, using the String() constructor.
+
+
+// let myName = "Bishal Kunwar";
+// let myLearning = "Computer Science";
+
+// console.log(`myName is ${myName} and i am learning ${myLearning}`);
+// console.log(myName.length);
+// // let courseName = new String("Freelancing") // string constructor.
+
+// let anySentence  = 'I am the "Real" hero';
+// let anotherSentence = "I am the \"Real\" hero";
+// console.log(anySentence);
+// console.log(anotherSentence);
+
+
+// // Finding a string in a string.
+
+// // String prototype.indexOf((searchValue, fromIndex)).
+
+// const myData = "Hello I am Mr . Bishal Kunwar, a noob coder";
+// console.log(myData.indexOf("Bishal"));
+
+
+// // Search a string in a string.
+
+// const myData = "Hello I am Mr . Bishal Kunwar, a noob coder";
+// sData = myData.search("Bishal");
+// console.log(sData);
+
+
+// Extracting String Parts
+
+// there are 3 methods of extracting a part of a string.
+
+// slice(start, end) , substring(start, end), substr(start, length).
+
+// Ths slice() method extracts a part of a string and returns the extracted part in a new string.
+// the method takes 2 parameters : the start and the end position,
+
+
+// var str = "Apple, Banana, Kiwi";
+
+// let res = str.slice(8,-1);
+// console.log(res);
+
+
+// // challenging time,
+
+// // display only 20 characters of a string like the 280 words used in twitter.
+// let myMessage = "afds dasfadsf gfger gsd vc rtwe hg  yt u yu re  rew re  rt rt rth  yt  ui ytu rt  g gf f fe wre t r rt";
+// let actualMessage = myMessage.slice(0,20);
+// console.log(actualMessage);
+
+
+// // The substring() Method.
+// // the substring() methdo is similar to slice().
+
+// // The difference is that substring() cannot accept the negative indexes.
+
+// var str = "apple, banana, caty";
+// let res = str.substring(8,-2);
+// console.log(res);
+
+
+// The substr() method.
+// the substr() method is similar to slice.
+// the difference is that the second parameter specifies the length of the extracted part.
+
+var str = "Apple, Banana, Kiwi";
+let res = str.substr(0,5);
+console.log(res);
+
