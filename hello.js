@@ -778,15 +778,91 @@
 // // The difference is that substring() cannot accept the negative indexes.
 
 // var str = "apple, banana, caty";
-// let res = str.substring(8,-2);
+// let res = str.substring(2,8);
 // console.log(res);
 
 
-// The substr() method.
-// the substr() method is similar to slice.
-// the difference is that the second parameter specifies the length of the extracted part.
+// // The substr() method.
+// // the substr() method is similar to slice.
+// // the difference is that the second parameter specifies the length of the extracted part.
 
-var str = "Apple, Banana, Kiwi";
-let res = str.substr(0,5);
-console.log(res);
+// var str = "Apple, Banana, Kiwi";
+// let res = str.substr(0,5);
+// console.log(res);
 
+
+// var str = "Apple, Banana, Kiwi";
+// let res = str.substr(-8);
+// console.log(res);
+
+
+
+// // Replacing String Content().
+// // String.prototype.replace(searchFor, replaceWith).
+
+// // The replace() method replaces a specified value with another value in a string.
+
+// // let myBiodata = "Hello, i was sujan at school but now i am Bishal, Bishal";
+// // let changed = myBiodata.replace("Bishal", "Rambahadur");
+
+// let myBiodata = "Hello, i was sujan at school but now i am Bishal, Bishal";
+// let changed = myBiodata.replaceAll("Bishal", "Rambahadur");
+
+// console.log(changed);
+// console.log(myBiodata);
+
+
+// // Points to remember.
+// // 1. The replace() method does not change the string. It is called on. It returns a new String.
+// // 2. By default, the replace() method replaces only the first match.
+// // 3. By default, the replace() method is case sensetive, case must be matched to be replaced.
+
+
+
+// // Extracting String Characters.
+// // There are 3 methods for extracting the String Character.
+
+// // The charAt() method, it returns the character at a specified index (position) in a string.
+
+// let string1 = "HELLO WORLD";
+
+// // console.log(string1.charAt(3));
+// // console.log(string1.charCodeAt(3));
+
+
+// // Property Access. ES5(2019) allows property access [] on strings.
+// let string1 = "HELLO WORLD";
+// console.log(string1[3]);
+
+
+
+// // Other useful methods.
+// // the concat() joins two or more settings.
+
+// let fName = "Bishal";
+// let lName = "Kunwar";
+
+// console.log(fName.toUpperCase());
+// console.log(lName.toLowerCase());
+
+// console.log(fName+" "+lName);
+// console.log(fName.concat(" ",lName));
+// console.log(`${fName} ${lName}`);
+
+
+// // String.trim()
+// // The trim() method removes whitespace from both sides of a string.
+// var str = "       Hello world      ";
+// console.log(str.trim());
+
+
+// // Converting a Strig to an Array.
+// // A String can be converted to an array with the split() method.
+
+// var text = "a,b,c,d,e";
+// console.log(text.split(","));
+// console.log(text.split(" "));
+// console.log(text.split("|"));
+
+
+//Date and Time Methods in JS (get and set).
