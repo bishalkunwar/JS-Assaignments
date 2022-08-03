@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button_su" onclick="goBack">Go Back</button>
+    <p>Notic that clicking on the back button will pull you back to your prvious activity</p>
+
+    <button class="button_su" onclick="confirmForward">bishal account</button>
+    <p>Notic that clicking on the back button will push you to the facebook account of bishal</p>
+
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+
+        function confirmForward(){
+            alert(location.href);
+            if(confirm("Open Bishal Facebook?")){
+                location.href = "https://www.facebook.com/"
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -866,3 +866,478 @@
 
 
 //Date and Time Methods in JS (get and set).
+
+// JavaScript Data objects represent a single moment in time in a platform-independent format.
+// Date objects contain a number that represent milliseconds since 1970 january 1 UTC.
+
+// Creating Date Objects
+// There are 4 ways to create a new date object.
+
+// let curretDate = new Date(); // Date objects are created with the new Date() constructor.
+// // console.log(curretDate);
+// console.log(curretDate.toLocaleString());
+// console.log(curretDate.toString());
+
+// new Date(year, month, day, hours, minutes, seconds, milliseconds)
+// // basically , it takes 7 arguements.
+// let currentnew Date(milliseconds)
+// // we can not avoid month section.
+// new Date(date String)
+// console.log(Date.now());
+
+
+// let thatTime = new Date(0);
+// console.log(thatTime);
+
+// let currentDate = new Date();
+// console.log(currentDate.toString());
+// console.log(currentDate.getFullYear());
+// console.log(currentDate.getMonth());
+// console.log(currentDate.getDate());
+// console.log(currentDate.getDay());
+
+// console.log(currentDate.setFullYear(2023));
+// console.log(currentDate.setMonth(8));
+
+
+// // Time methods.
+// let timeNow = new Date();
+// console.log(timeNow.getTime());
+// console.log(timeNow.getHours());
+// console.log(timeNow.getMinutes());
+// console.log(timeNow.getSeconds());
+// console.log(timeNow.getMilliseconds()); 
+
+// // Time methods.
+// let timeNow = new Date();
+// console.log(timeNow.setTime());
+// console.log(timeNow.setHours());
+// console.log(timeNow.setMinutes());
+// console.log(timeNow.setSeconds());
+// console.log(timeNow.setMilliseconds());  these all methods will throw the error NAN.
+
+
+// setInterval(myFunction, 1000);
+//         function myFunction(){
+//             let dateTime = new Date();
+//             // dateTime.setHours(9);
+//             document.getElementById("pass").innerHTML = dateTime.toString();
+//         }
+
+
+// // Practice time.
+// new Date().toLocaleTimeString(); // 11:18:25 AM
+// new Date().toLocaleDateString();
+// new Date().toLocaleString();
+
+
+
+// Section 9.
+
+// JavaScript Math object.
+
+// The JavaScript Math object allows us to perform mathematical tasks on numbers.
+
+// console.log(Math.PI);
+// console.log(Math.round(2.7786));
+// console.log(Math.pow(3, 3));
+// console.log(Math.sqrt(105));
+// onsole.log(Math.abs(-21));
+// console.log(Math.abs(2-4));
+// console.log(Math.floor(4.3));
+// console.log(Math.floor(4.7));
+// console.log(Math.ceil(2.03));
+// console.log(Math.trunc(-11.21));
+// console.log(Math.trunc(21.3));
+
+// console.log(Math.min(10, 20, 30, 40, 50, 60));
+// console.log(Math.max(10, 20, 30, 40, 50, 60));
+
+// console.log(Math.floor(Math.random() * (50-40+1)) + 40);
+
+
+
+// Section 10, window documents and objects models. 
+
+// Windows vs Documents in JavaScript.
+
+// Windows is the main container or we can say the global object and any operations related to entire browser window can be a part of window object.
+// Whereas the DOM is the child of window object.
+
+// All the members like objects, methods, or proporties, if they are the part of window object then we do not refer the window object, whereas in th DOM we need to refer the document if we want to use the document object, methods and proporties.
+
+// window.location or like window.location.href // location.href.
+
+
+// Window has methods, properties and object. example: setTimeout() or setInterval() are the methods, where as Document is the object of the Window and it also has a screen object with properties describing the physical display.
+// Document is just the object of the global object that is window, which deals with the document, the HTML elements themselves.
+
+
+// DOM vsBOM.
+
+// BOM --> Browser Object Model --> includes: navigator, scree, location, frames, history, XML HttpRequest
+// DOM --> Document Object Model --> includes all related html elements .
+// JavaScript --> object, array, functions.
+
+
+// Functions alert/confirm/prompt are also a part of BOM:
+// They are directly not related to the document;
+// but represent pure browser methods of communicating with the user.
+
+
+// Navigating through the DOM.
+
+// 1. document.getElement returns the element that is the root element of the document.
+// 2. document.head
+// 3. document.body
+// 4. document.body.childNodes (includes tab, enter and whitespace) // list of the direct children only.
+// 5. document.children (without texts nodes, only regular elements)
+// 6. document.childNodes.length.
+
+// *** Practice time ***
+
+// How to do check whether an element has child nodes or not?
+// we will do use hasChildNodes() // this will return the boolean value true or false.
+
+// how to find the child in DOM tree
+
+// firstChild vs firstElementChild
+// lastChild vs lastElementChild
+// const data = document.body.firstElementChild;
+// data.firstElementChild
+// data.firstElementChild.firstElementChild
+// data.firstElementChid.firstElementChild.style.color = "red";
+// vs
+// document.querySelector(".child-two").style.color="yellow";
+
+// How to find the parent nodes.
+// document.body.parentNode
+// document.body.pareneElement
+
+
+// How to find or access the siblings
+// document.body.nextSibling
+// document.body.nextElementSibling
+// document.body.previousSibling.
+// document.body.previousElementSibling
+
+
+// How to do search the elements and the references , 
+// it is at the specific html file.
+
+
+
+// Events in Js
+
+// HTML events are "things" that happen to HTML elements.
+// when JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+// HTML Events.
+// An HTML event can be something the browser does or something a user does.
+// Here are some examples of HTML Events.
+
+// An HTML web page has finished loading.
+// an HTML input field was changed.
+// An HTML button was clicked, 
+// often, when events happen, you may want to do something.
+
+// JS lets you execute code when events are detected.
+
+// HTML allows event handler attributes , with JS code to be added to HTML elements.
+
+
+
+// section 1️ 4 ways of writing Events in JavaScript
+
+// 1: using inline events alert();
+// 2: By Calling a funcion (We already seen and most common way of writing) 
+// 3: using Inline events (HTML onclick="" property and element.onclick)
+// 4: using Event Listeners (addEventListener and IE's attachEvent)
+
+// check the Events HTML File
+
+
+
+// section 2️: What is Event Object?
+// Event object is the parent object of the event object. 
+// for Example 
+// MouseEvent, focusEvent, KeyboardEvent etc 
+
+
+
+// section ️3️ MouseEvent in JavaScript
+// The MouseEvent Object
+// Events that occur when the mouse interacts with the HTML 
+// document belongs to the MouseEvent Object.
+
+
+
+// section ️4️ KeyboardEvent  in JavaScript
+// Events that occur when user presses a key on the keyboard, 
+// belongs to the KeyboardEvent Object.
+// https://www.w3schools.com/jsref/obj_keyboardevent.asp
+
+
+// Section 5️ InputEvents in JavaScript 
+// The onchange event occurs when the value of an element has been changed.
+
+// For radiobuttons and checkboxes, the onchange event occurs when the 
+// checked state has been changed.
+
+
+ 
+// JavaScript Timing Events.
+
+// The window object allows execution of code at specified time intervals, these intervals are called timing events.
+// Two key method to use with JavaScript are: 
+// setTimeout(function, milliseconds)
+// executes a function , after waiting a specified number of milliseconds.
+
+// setInterval(function, milliseconds)
+// Same as setTimeout(), but repeats the execution of the fuction continuously.
+
+
+// setTimeout() , clearTimeout() , setInterval() , clearInterval() .
+
+
+
+// OOP's inJs
+// Object Literals. it is simply a key:value pair data structure.
+// storing variables and functions together in one component, we can refer this as an object.
+
+// example -- school bag holds water bottle, tiffin, books, scarf.
+
+// ways of creating an object:
+
+// // 1st way,
+
+// let myBio = {
+
+//     myData:{
+//         myName: "Bishal",
+//         myAge: 23,
+//     },
+
+//     myAddress:{
+//         current:"Gongabu",
+//         permanent: "Baglung",
+//     },
+ 
+//     // getData: function(){
+//     //     console.log(`My name is ${myBio.myName} and my age is ${myBio.myAge}`);
+//     // }
+
+//     getData(){
+//         console.log(`My name is ${myBio.myData.myName} and my permanent address is ${myBio.myAddress.permanent}`);
+//     }
+
+// }
+
+// console.log(`My name is ${myBio.myData.myName} and my current address is ${myBio.myAddress.current}`);
+// console.log(myBio.getData());
+
+
+// what is this object.
+// The definition of "this" object is that it contains the current context.
+// The this object can have different values  depending where it is placed/
+
+// for example : 
+// console.log(this) // it refers to the current context and that is window global object.
+
+// console.log(this.alert('Awesome'));
+// // this refers to the current cotext and that is window global object.
+
+// // example 2: 
+// function myName(){
+//     console.log(this);
+// }
+
+// myName();
+
+
+// var name = "Bishal";
+// function myName(){
+//    console.log(this.name);
+// }
+
+// myName();
+
+
+// const obj = {
+//     myAge: 23,
+
+//     myAgeNow(){
+//         console.log(this.myAge);
+//     }
+
+// }
+
+// obj.myAgeNow();
+
+
+// const obj = {
+//     myAge: 23,
+//     myAgeNow: ()=>{
+//         console.log(this);
+//     }
+// }
+
+// obj.myAgeNow(); // this pushes us to the window feature at web console. // if we do use fat arrow function, then we cannot do use this .
+
+
+// let bioData = {
+//     myNames:{
+//         name: "bishal",
+//         nick: "sujan",
+//     },
+
+//     myAge: 26,
+
+//     getData(){
+//         console.log(`my name is ${this.myNames.name} and i am ${this.myAge} years old`);
+//     }
+// }
+
+// bioData.getData();
+
+
+
+// var vs let vs const done, template strings done, arrow function done, default arguements done, 
+// getting started with destructuring.
+
+
+
+// // Array destructuring.
+// const myBioData = ["Bishal", "Kunwar", 23];
+
+// // let myFName = myBioData[0];
+// // let myLName = myBioData[1];
+
+// // console.log(`my first name is ${myFName} and last name is ${myLName}`);
+
+// // Destructuring here, position of object assaignments matters a lot while destructuring.
+// let [myFName, myLName, myAge, myDegree="BCS"] = myBioData;
+// console.log(myDegree);
+
+
+// // object destructuring.
+// let myBio = {
+//     firstName: "Bishal", secondName:"kunwar", age:23
+// }
+
+// let {firstName, secondName, age, myDegree="BCS"} = myBio;
+
+// console.log(firstName);
+
+
+
+// // Object properties.
+// // we can now use dynamic properties.
+
+// let myName = "Bishal";
+// const myBio = {
+//     [myName] : "Hello, how are you",
+//     [20+3]: ",you are right?"
+// }
+
+// console.log(myBio);
+
+// const myName = "Bishal"; const myAge = 23;
+
+// let  bio = {
+//     myName, myAge
+// }
+
+// console.log(bio);
+
+
+
+// // Spread Operator.
+
+// const colors = ["red", "yellow", "green", "blue"];
+// const myColors = ["yellow", "red", "Purple", "black"];
+
+// const myFavColors = [...colors, "purple", "black"];
+// console.log(myFavColors);
+
+
+// // ES7 / ECMA Script 2016.
+
+// // Array.Prototype.include or simply array.include.
+// let colors = ["red", "yellow", "green", "blue"];
+// const isIcluded = colors.includes("red" && "yellow"&& "green"&& "blue");
+// if(isIcluded){
+//     let newColors = [...colors];
+//     console.log("Yes, it includes")
+//     console.log(newColors);
+// }
+// else{
+//     console.log("not id does not includes includes");
+// }
+
+
+
+// // Exponentiation Operator
+// console.log(2**5)
+
+
+
+// // ECMA Script 8, 2017.
+// // the new feature async await was introduced.
+
+
+// // pasStart and padEnd.
+// let myName = "Bishal".padStart(8);
+// let myAge = "23".padEnd(10);
+// console.log(myName+"Hello word");
+// console.log(myAge);
+
+
+// // Object.values()
+// const person = {name:"bishal", age:23};
+// console.log(Object.values(person));
+// console.log(Object.entries(person)); 
+
+
+
+// // ES9 . 2018
+
+// const person1 = {name:"bishal", age:23};
+// const person2 = {...person1};
+// console.log(person1);
+// console.log(person2);
+
+
+
+// // ES 2019.
+
+// // flatten an array.
+// const array1 = [['a1', 'b1'], ['c1', ['d2','e3']], ['f1', 'f2',  ['d2','e3', 'f3'], ['a1', 'b1']]];
+// // let flatArray1 = array1.reduce((accumulator, currentValue)=>{
+// //     return accumulator.concat(currentValue);
+// // })
+
+// // console.log(flatArray1); // this was the issue in reduce function property . 
+
+// // // but using flat we can overcome this one.
+
+
+// console.log(array1.flat(Infinity));
+
+
+// const person1 = {name:"bishal", age:23};
+// const arrObject = Object.entries(person1);
+// console.log(arrObject);
+// console.log(Object.fromEntries(arrObject));
+
+
+// // ES 2020.
+// // BigInt
+// let oldNum = Number.MAX_SAFE_INTEGER;
+// console.log(oldNum);
+// console.log(oldNum+500);
+
+let newNum = 9007199254740991n + 8n;
+console.log(typeof(newNum));
+console.log(newNum);
+
