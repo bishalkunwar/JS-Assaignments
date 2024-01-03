@@ -9,6 +9,7 @@
         .flex-container{
             background-color: black;
             display: flex;
+            /* flex-wrap: wrap; */
             justify-content: center;
         }
 
@@ -16,21 +17,28 @@
             background-color: aliceblue;
             margin: 10px;
             padding: 10px;
+            margin-right: 50px;
+            justify-content: center;
+            text-align: center;
         }
 
-        .flex-container-col{
-            background-color: black;
+        .flex-container-1{
             display: flex;
             justify-content: center;
-            flex-direction: column;
+            flex-wrap: wrap;
+            flex: 70%;
+            margin-right: 50px;
         }
 
-        .flex-container-col div{
-            background-color: aliceblue;
-            margin: 10px;
-            padding: 10px;
-            text-align: center;
-            color: red;
+        .flex-container-1 div{
+            background-color: aqua;
+            /* margin: 5px;
+            padding: 5px; */
+        }
+
+        .flex-container-2{
+            flex: 30%;
+            margin-left: 50px;
         }
     </style>
 </head>
@@ -38,15 +46,27 @@
     <h2>Flex Box</h2>
 
     <div class="flex-container">
-        <div>row 1</div>
-        <div>row 2</div>
-        <div>row 3</div>
+        <div class="flex-container-1">
+            <div>row 1</div>
+            <div>row 2</div>
+            <div>row 3</div>
+            <div>row 4</div>
+            <div>row 5</div>
+            <div>row 6</div>
+            <div>row 3</div>
+            <div>row 4</div>
+            <div>row 5</div>
+            <div>row 6</div>
+        </div>
+        <div class="flex-container-2">
+            <div>row seperate</div>
+        </div>
     </div>
 
-    <div class="flex-container-col">
+    <!-- <div class="flex-container-col">
         <div>col1</div>
         <div>col 2</div>
         <div>col 3</div>
-    </div>
+    </div> -->
 </body>
 </html>
