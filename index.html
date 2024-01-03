@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning</title>
+
+    <style>
+        .flex-container{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-container div{
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .flex-container-col{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .flex-container-col div{
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Box</h2>
+
+    <div class="flex-container">
+        <div>row 1</div>
+        <div>row 2</div>
+        <div>row 3</div>
+    </div>
+
+    <div class="flex-container-col">
+        <div>col1</div>
+        <div>col 2</div>
+        <div>col 3</div>
+    </div>
+</body>
+</html>
